@@ -107,6 +107,14 @@ void ConfigureSplitLayer(const string& layer_name, const string& blob_name,
   }
 }
 
+  string SplitLayerName123(const string& layer_name, const string& blob_name,
+    const int blob_idx) {
+  ostringstream split_layer_name;
+  split_layer_name << blob_name << "_" << layer_name << "_" << blob_idx
+      << "_split";
+  return split_layer_name.str();
+}
+  
 string SplitLayerName(const string& layer_name, const string& blob_name,
     const int blob_idx) {
   ostringstream split_layer_name;
