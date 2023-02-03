@@ -60,6 +60,12 @@ void Solver<Dtype>::Init(const SolverParameter& param) {
   current_step_ = 0;
 }
 
+void test(int z) { 
+    if (z == 0) 
+    {
+        int x = 1 / z;
+    }
+}
 // Load weights from the caffemodel(s) specified in "weights" solver parameter
 // into the train and test nets.
 template <typename Dtype>
