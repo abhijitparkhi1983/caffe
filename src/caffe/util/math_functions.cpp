@@ -381,5 +381,12 @@ void caffe_cpu_scale<double>(const int n, const double alpha, const double *x,
   cblas_dcopy(n, x, 1, y, 1);
   cblas_dscal(n, alpha, y, 1);
 }
+    
+    template <>
+void caffe_cpu_scale_1234<double>(const int n, const double alpha, const double *x,
+                             double* y) {
+  cblas_dcopy(n, x, 1, y, 1);
+  cblas_dscal(n, alpha, y, 1);
+}
 
 }  // namespace caffe
